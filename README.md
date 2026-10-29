@@ -1,5 +1,7 @@
 # Disclosed · 披露了
 
+**Live site:** https://jo-peace.github.io/disclosed/ · **Source:** https://github.com/Jo-Peace/disclosed
+
 **U.S. House members' stock trades, read from official PDFs (including scanned paper forms) by Meta's Muse Spark and explained in Traditional Chinese and English.**
 
 > Free · non-commercial · no ads · **not investment advice.** Data comes only from official U.S. House Clerk disclosures. Every row links to its source PDF.
