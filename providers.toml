@@ -1,0 +1,24 @@
+# Which AI backs which job. Default for everything = Meta Model API (Muse Spark).
+# Override per role here, or with env vars DISCLOSED_PROVIDER_<ROLE> (e.g. DISCLOSED_PROVIDER_RISK=openai_compat).
+# A provider value is either a built-in name ("meta") or a plug-in spec "package.module:ClassName".
+[roles]
+pdf_parser = "meta"     # reads the PDF (needs a provider with supports_pdf=True, or give it text)
+parser     = "meta"     # MAGI role 1: data parser / verifier
+risk       = "meta"     # MAGI role 2: risk reviewer
+explainer  = "meta"     # MAGI role 3: plain-language bilingual explainer
+
+[providers.meta]
+model = "muse-spark-1.3"
+reasoning_effort = "medium"
+# base_url = "https://api.meta.ai/v1"
+
+# ---- examples only (NOT used in the hackathon submission; see README "Adding another provider") ----
+# [providers.openai_compat]
+# class = "disclosed.providers.examples.openai_compat:OpenAICompatProvider"
+# base_url = "https://api.openai.com/v1"
+# model = "gpt-4.1-mini"
+# api_key_env = "OPENAI_API_KEY"
+#
+# [providers.claude_cli]
+# class = "disclosed.providers.examples.cli_tool:CliProvider"
+# command = ["claude", "-p"]

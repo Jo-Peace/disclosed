@@ -1,0 +1,34 @@
+docs 384 same_count 384 rows 3597 full_match 3577 (99.44%)
+owner 3597 100.00%
+ticker 3589 99.78%
+tx_type 3597 100.00%
+tx_date 3597 100.00%
+notif_date 3597 100.00%
+amount_low 3597 100.00%
+amount_high 3596 99.97%
+cap_gains_over_200 3585 99.67%
+asset_name 3595
+Counter({'cap_gains_over_200': 12, 'ticker': 8, 'asset': 2, 'amount_high': 1})
+('20033780', 0, 'ticker', None, 'CRYPTO:BTC')
+('20033789', 51, 'cap_gains_over_200', 1, None)
+('20033916', 15, 'cap_gains_over_200', 0, None)
+('20033916', 24, 'cap_gains_over_200', 0, None)
+('20033927', 6, 'ticker', 'ICAPITAL', None)
+('20033981', 0, 'ticker', None, 'CRYPTO:BTC')
+('20033983', 41, 'cap_gains_over_200', 0, None)
+('20033983', 50, 'cap_gains_over_200', 0, None)
+('20033983', 59, 'cap_gains_over_200', 0, None)
+('20033983', 86, 'ticker', 'MGY', None)
+('20033983', 86, 'amount_high', 50000, None)
+('20033983', 86, 'asset', 'Magnolia Oil & Gas Corporation Class A Common Stoc', 'Magnolia Oil & Gas Corporation Class')
+('20033989', 0, 'ticker', 'AMI', None)
+('20034106', 15, 'cap_gains_over_200', 0, None)
+('20034133', 4, 'ticker', None, '91282CLC3')
+('20034159', 7, 'cap_gains_over_200', 0, None)
+('20034159', 18, 'cap_gains_over_200', 0, None)
+('20034274', 33, 'cap_gains_over_200', 0, None)
+('20034274', 42, 'cap_gains_over_200', 0, None)
+('20034487', 7, 'cap_gains_over_200', 0, None)
+('20034869', 0, 'ticker', None, 'CCLFX')
+('20034869', 1, 'ticker', None, 'CCLFX')
+('20035445', 0, 'asset', 'American Funds AMCAP Fund Class A M/F [MF} [OT]', 'American Funds AMCAP Fund Class A M/F')

@@ -1,0 +1,21 @@
+# Python / tooling
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Secrets: never commit keys (.env.example is a placeholder template)
+.env
+.env.*
+!.env.example
+*.key
+
+# Large or re-downloadable data (the prebuilt site/ already contains the exported data)
+data/pdfs/
+data/llm_cache/
+data/chunks/
+data/price_cache/
+data/2026FD.zip
+data/*.sqlite
+data/*.sqlite.bak*
+data/*.log

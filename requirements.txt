@@ -1,0 +1,4 @@
+requests>=2.31
+pymupdf>=1.24   # only for the cap-gains checkbox flag
+# optional (only if you add OpenAI-compatible / other providers that use their SDKs):
+# openai>=1.40
