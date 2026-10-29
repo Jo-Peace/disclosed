@@ -22,7 +22,7 @@ from PIL import Image; im=Image.open('/tmp/_tall_$L.png').convert('RGB'); W,H=im
 x=W//2; y0=next(y for y in range(300,H) if im.getpixel((x,y))==(227,230,239) and im.getpixel((x,y+1))==(227,230,239))
 y1=next((y for y in range(y0+60,H) if all(im.getpixel((xx,y))==(245,246,250) for xx in (60,W//2,W-60))), H)
 im.crop((0,max(0,y0-20),W,min(H,y1+10))).save('$O/13_big_single_$L.png')"; echo $O/13_big_single_$L.png; done
-# 14: picks method toggle (cropped from a tall shot at the segmented control, color #1f3a8a); zh = 議員共識 (default), en = Backtest-best (?m=v1)
+# 14: picks method toggle (cropped from a tall shot at the segmented control, color #1f3a8a); zh = 議員共識 (default), en = Rule v1 (multi-factor score) (?m=v1)
 for X in "zh|" "en|&m=v1"; do L=${X%%|*}; Q=${X#*|}
   google-chrome --headless=new --no-sandbox --disable-gpu --hide-scrollbars --window-size=1360,4600 --virtual-time-budget=9000 --screenshot=/tmp/_pk_$L.png "$B/?lang=$L#/?x=1$Q" >/dev/null 2>&1
   .venv/bin/python - "$L" "$O" <<'PY'
