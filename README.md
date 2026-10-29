@@ -28,8 +28,8 @@ Under the STOCK Act, members of Congress must disclose stock trades within 45 da
 - **Congress Consensus board (議員共識榜).** For each stock it syncs buys *and* sells per member: who is a net buyer and who has already sold. It shows an **estimated net amount** from the disclosed ranges (midpoints; open-ended brackets use the lower bound and are flagged). There are 90- and 30-day views. A separate **Big single-member buys** list flags when one member supplies >60% of the money.
 - **Two switchable daily pick methods.**
   - **Congress consensus** (default, `rules-v4-consensus-amount`): ≥2 net buyers, more buyers than sellers, ranked by estimated net amount.
-  - **Backtest-best** (`rules-v1`): an additive score over amount, number of buyers, filing speed, recency and liquidity.
-  - Tickers picked by both methods on the same day get an **In both / 雙重入選** badge. Use `?m=v1` in the hash to select Backtest-best.
+  - **Rule v1 (multi-factor score)** (`rules-v1`): an additive score over amount, number of buyers, filing speed, recency and liquidity.
+  - Tickers picked by both methods on the same day get an **In both / 雙重入選** badge. Use `?m=v1` in the hash to select Rule v1 (multi-factor score).
 - **Member and ticker pages.** Every filing and trade is listed with a link to the official PDF. Ticker pages chart price vs SPY with filing ticks.
 - **Parse-confidence badges on every row.** A badge shows the parse source (rule or Meta vision), the Meta cross-check, the MAGI verdict with its confidence %, an "inferred ticker" flag and an "illegible" flag.
 - **Honest track record.**
@@ -124,14 +124,14 @@ Excess return vs SPY measured from the day each filing became public (first trad
 |---|---|---|---|
 | All disclosed purchases (baseline) | −0.01% / −0.14% / 48.2% (2,408) | −0.29% / −1.63% / 44.5% (2,204) | −0.79% / −5.09% / 39.7% (1,632) |
 | **Congress consensus** (rules-v4) | +0.78% / +0.03% / 50.3% (165) | +1.27% / **−2.07%** / 43.6% (149) | +4.11% / **−2.13%** / 45.1% (91) |
-| **Backtest-best** (rules-v1) | −0.01% / −0.29% / 46.9% (226) | +2.53% / +1.12% / 52.5% (200) | +6.06% / +0.94% / 50.4% (123) |
+| **Rule v1 (multi-factor score)** (rules-v1) | −0.01% / −0.29% / 46.9% (226) | +2.53% / +1.12% / 52.5% (200) | +6.06% / +0.94% / 50.4% (123) |
 | **In both** (same-day overlap) | +0.25% / −0.31% / 44.4% (63) | +4.06% / +1.29% / 50.9% (55) | +10.02% / −3.81% / 47.1% (34) |
 
 What we read from this:
 
 - The average disclosed purchase did **not** beat SPY.
 - The consensus method's positive means come with **negative medians**: a few big winners, most picks lagging.
-- Backtest-best (v1) is the most consistent of the four rule versions we tried. v2 (rank by net-buyer count) and v3 (pure net amount) were tested and dropped.
+- Rule v1 (multi-factor score) is the most consistent of the four rule versions we tried. v2 (rank by net-buyer count) and v3 (pure net amount) were tested and dropped.
 - The overlap's 90-day mean is driven by a few outliers and n is small.
 - Live frozen picks started on 2026-10-28 and have no matured 30/90-day samples yet.
 - Rules were chosen *after* seeing backtests, so in-sample bias applies. That is exactly why live picks are frozen from now on.

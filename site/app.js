@@ -37,7 +37,7 @@ const T = {
    ["資料來源", "僅使用美國眾議院書記官處公開的 STOCK Act 定期交易申報（PTR）及其官方 PDF。不含參議院、不含任何非官方消息。"],
    ["解析", "文字 PDF 以 pdftotext + 規則解析，並用「申報筆數、欄位完整度、資本利得核取方塊數」做自我一致性檢查（384/384 份通過，這是自洽檢查，不等於人工逐筆驗證）。文字 PDF 另由 Meta Muse Spark 獨立解析並逐筆交叉比對；掃描 PDF（手寫/紙本表格，無股票代號）只由 Meta 視覺解析，並標記辨識不清的列；紙本表格沒有代號，代號是用公司名稱經 Yahoo 搜尋比對「推測」的（標示為推測，比對不確定者不計價）。"],
    ["MAGI 三方投票", "資料解析員、風險審查員、白話說明員三個角色各自表態，由程式碼（非 AI）決定共識與信心分數；分歧會標記待人工複核（⚑）。所有掃描申報、規則/模型不一致列、交易日晚於通知日的異常列，以及隨機抽樣文字申報列皆已跑過三方投票；其餘列顯示「MAGI 未抽查」。"],
-   ["每日精選（兩種判斷方式）", "每天同時產生兩份榜單並分別凍結（雜湊鏈日誌中以 method 標記）：①「議員共識」（rules-v4-consensus-amount，預設）：近 90 天至少 2 位議員淨買進、且淨買進人數多於淨賣出人數，依估計淨買進金額（申報區間中間值估算，買進減賣出；無上限級距以下限計）排序，淨額 ≤ 0 不入榜，並要求 20 日均成交額至少 100 萬美元。②「規則 v1（動能篩選）」（rules-v1）：依最大單筆金額 25、多位議員買進 30、申報速度 15、新鮮度 20、流動性 10 加權打分。兩者同日皆入選者標示「雙重入選」。另曾測試 v2（淨買進人數）與 v3（純淨買進金額），回測未優於上述兩版，已不採用。舊紀錄不會改寫；不是預測模型，回測為事後重建。"],
+   ["每日精選（兩種判斷方式）", "每天同時產生兩份榜單並分別凍結（雜湊鏈日誌中以 method 標記）：①「議員共識」（rules-v4-consensus-amount，預設）：近 90 天至少 2 位議員淨買進、且淨買進人數多於淨賣出人數，依估計淨買進金額（申報區間中間值估算，買進減賣出；無上限級距以下限計）排序，淨額 ≤ 0 不入榜，並要求 20 日均成交額至少 100 萬美元。②「規則 v1（多因子評分）」（rules-v1）：依最大單筆金額 25、多位議員買進 30、申報速度 15、新鮮度 20、流動性 10 加權打分。兩者同日皆入選者標示「雙重入選」。另曾測試 v2（淨買進人數）與 v3（純淨買進金額），回測未優於上述兩版，已不採用。舊紀錄不會改寫；不是預測模型，回測為事後重建。"],
    ["價格", "Yahoo Finance 公開日線資料，本機快取；無法取得的標的會明確標記，不會填補。選擇權、債券、私募基金、特別股等不納入。"],
    ["法規提醒", "依 5 U.S.C. §13107(c)，這些申報資料不得用於商業目的、募款或徵信。本站為免費、無廣告、非商業之研究/教育專案。"],
    ["限制", "申報金額只是區間；交易可能在 45 天後才申報；配偶/子女的交易也會出現；同一標的買賣動機不明；本站不推論任何不當行為。"]],
@@ -89,7 +89,7 @@ const T = {
    ["Source", "Only the STOCK Act Periodic Transaction Reports (PTRs) and official PDFs published by the US House Clerk. No Senate data, no unofficial tips."],
    ["Parsing", "Text PDFs are parsed with pdftotext + rules and self-checked (row count, field completeness, cap-gains checkbox count; 384/384 filings pass — a consistency check, not a line-by-line human audit). Text PDFs are also parsed independently by Meta Muse Spark and compared row by row. Scanned (paper/handwritten) PDFs have the Meta vision parse only, with unclear rows flagged; paper forms print no ticker, so tickers are INFERRED from the printed company name through Yahoo search (flagged as inferred; uncertain names are left unpriced)."],
    ["MAGI 3-role vote", "A data-parser, a risk-reviewer and a plain-language explainer each vote; plain code (not AI) decides consensus and confidence, and disagreements are flagged (⚑) for human review. All scanned filings, rule/model mismatches, rows whose trade date is after the notification date, and a random sample of text filings went through the vote; remaining rows show “MAGI not sampled”."],
-   ["Daily featured (two methods)", "Two lists are produced and frozen separately every day (tagged by method in the hash-chained log): (1) Congress consensus (rules-v4-consensus-amount, default): at least 2 net-buying members over 90 days and more net buyers than sellers, ranked by estimated net buy amount (range midpoints, purchases minus sales; open-ended top bracket uses its lower bound), net ≤ 0 excluded, min $1M average 20-day dollar volume. (2) Rule v1 (momentum screen, rules-v1): weighted score — largest purchase 25, multiple buyers 30, filing speed 15, recency 20, liquidity 10. Tickers on both lists the same day are marked In both. v2 (net-buyer count) and v3 (pure net amount) were also tested and dropped because they did not beat these two in the backtest. Old records are never rewritten; not a prediction model; backtests are reconstructed after the fact."],
+   ["Daily featured (two methods)", "Two lists are produced and frozen separately every day (tagged by method in the hash-chained log): (1) Congress consensus (rules-v4-consensus-amount, default): at least 2 net-buying members over 90 days and more net buyers than sellers, ranked by estimated net buy amount (range midpoints, purchases minus sales; open-ended top bracket uses its lower bound), net ≤ 0 excluded, min $1M average 20-day dollar volume. (2) Rule v1 (multi-factor score, rules-v1): weighted score — largest purchase 25, multiple buyers 30, filing speed 15, recency 20, liquidity 10. Tickers on both lists the same day are marked In both. v2 (net-buyer count) and v3 (pure net amount) were also tested and dropped because they did not beat these two in the backtest. Old records are never rewritten; not a prediction model; backtests are reconstructed after the fact."],
    ["Prices", "Yahoo Finance public daily data, cached locally; anything unavailable is marked, never imputed. Options, bonds, private funds and preferred shares are excluded."],
    ["Legal", "Under 5 U.S.C. §13107(c) these records may not be used for commercial purposes, fundraising or credit rating. This is a free, ad-free, non-commercial research/education project."],
    ["Limits", "Amounts are only ranges; trades can be filed 45 days late; spouse/child trades also appear; motives are unknown; nothing here implies wrongdoing."]],
@@ -115,7 +115,7 @@ const ZH = {"TSM": "台積電", "NVDA": "輝達", "AAPL": "蘋果", "MSFT": "微
 /* search key for a ticker: ticker + English name + zh alias */
 const skey = x => (x.tk + " " + x.name + " " + (ZH[x.tk] || "")).toLowerCase();
 const MT = {
-  zh: {m_cons: "議員共識", m_v1: "規則 v1（動能篩選）", m_lab: "判斷方式",
+  zh: {m_cons: "議員共識", m_v1: "規則 v1（多因子評分）", m_lab: "判斷方式",
     m_desc_cons: "近 90 天至少 2 位議員淨買進、且淨買進人數多於淨賣出，依估計淨買進金額排序（rules-v4-consensus-amount）。",
     m_desc_v1: "依最大單筆金額、多位議員買進、申報速度、新鮮度與流動性加權打分（rules-v1）。此版是依回測從 v1–v4 中選出，帶有選擇偏誤（見績效追蹤頁說明）。",
     both: "雙重入選", both_tip: "此股票同日也在另一種判斷方式的榜單中",
@@ -123,7 +123,7 @@ const MT = {
     cmp_h: "兩種判斷方式比較（回測，事後重建）", cmp_note: "回測只用當日已公開的資料事後重建，同一 (股票, 公開日) 只計一次；不是實盤成績，也不保證未來。n<10 不下結論。",
     ov_row: "雙重入選（兩榜同日皆入選）", dropped: "另曾測試 v2（依淨買進人數）與 v3（純淨買進金額），回測表現未優於上述兩版，已不採用（舊紀錄保留不改寫）。",
     live_pending: "此判斷方式的實盤榜單將自下一次每日凍結開始寫入；以下先顯示回測重播。", live_h: "實盤（凍結後計分）"},
-  en: {m_cons: "Congress consensus", m_v1: "Rule v1 (momentum screen)", m_lab: "Method",
+  en: {m_cons: "Congress consensus", m_v1: "Rule v1 (multi-factor score)", m_lab: "Method",
     m_desc_cons: "At least 2 members net-buying over 90 days and more net buyers than sellers, ranked by estimated net buy amount (rules-v4-consensus-amount).",
     m_desc_v1: "Weighted score on largest purchase, multiple buyers, filing speed, recency and liquidity (rules-v1). This version was picked by backtest among v1–v4, which carries selection bias (see the Track record page).",
     both: "In both", both_tip: "This ticker is also on the other method's list for the same day",
