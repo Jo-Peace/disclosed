@@ -107,21 +107,24 @@ def main():
     live = _read(LOGDIR / "live.jsonl"); back = _read(LOGDIR / "backtest.jsonl")
     ai = load_ai()
     for e in live:
+        E = e
         for p in e["picks"]:
-            p["facts_en"] = facts_line(p, "en"); p["facts_zh"] = facts_line(p, "zh")
+            p["facts_en"] = facts_line(p, "en", E["pick_date"]); p["facts_zh"] = facts_line(p, "zh", E["pick_date"])
             if ai.get(f"{e['pick_date']}|{p['ticker']}", {}).get("status") == "ok": p["ai_summary"] = {"status": "ok", **{k: ai[f"{e['pick_date']}|{p['ticker']}"][k] for k in ("zh_tw", "en")}}
     scored = json.loads(SCORED.read_text()) if SCORED.exists() else None
     latest = (live[-1] if live else (back[-1] if back else None))
     if latest and latest["mode"] == "backtest":
-        for p in latest["picks"]: p["facts_en"] = facts_line(p, "en"); p["facts_zh"] = facts_line(p, "zh")
+        E = latest
+        for p in latest["picks"]: p["facts_en"] = facts_line(p, "en", E["pick_date"]); p["facts_zh"] = facts_line(p, "zh", E["pick_date"])
     methods = {}
     for m, M in METHODS.items():
         bl = _read(LOGDIR / M["backtest_file"]); bp = LOGDIR / M["backtest_file"]
         bl_last = bl[-1] if bl else None
         if bl_last:
-            for p in bl_last["picks"]: p["facts_en"] = facts_line(p, "en"); p["facts_zh"] = facts_line(p, "zh")
+            E = bl_last
+            for p in bl_last["picks"]: p["facts_en"] = facts_line(p, "en", E["pick_date"]); p["facts_zh"] = facts_line(p, "zh", E["pick_date"])
         methods[m] = {"version": M["version"], "live": [e for e in live if entry_method(e) == m], "backtest_latest": bl_last,
-                      "n_backtest": len(bl), "backtest_chain": verify(bp) if bp.exists() else None}
+                      "n_backtest": len(bl), "bt_from": bl[0]["pick_date"] if bl else None, "bt_to": bl[-1]["pick_date"] if bl else None, "n_live_days": len({e["pick_date"] for e in live if entry_method(e) == m}), "n_live_entries": sum(len(e["picks"]) for e in live if entry_method(e) == m), "backtest_chain": verify(bp) if bp.exists() else None}
     def strip(sm):   # keep summary only
         return {b: {h: s for h, s in d.items()} for b, d in sm.items()}
     data = {

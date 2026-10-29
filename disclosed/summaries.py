@@ -32,11 +32,39 @@ Transactions FILED IN THE LAST 14 DAYS (only these are listed; earlier filings i
 Auto-computed facts (rule-based, not AI): {facts}
 Write the 2-sentence summary in zh-TW and in English (zh-TW disclaimer wording: 非投資建議; also state the 45-day filing window)."""
 
-def facts_line(p, lang="en"):
-    n = len(p["tx"]); amts = sorted({t["amount"] for t in p["tx"] if t["amount"]})
+SHOW_TX = 6   # the site's pick card shows at most this many detail rows
+
+def _minus(d, n):
+    import datetime as _dt
+    return (_dt.date.fromisoformat(d) - _dt.timedelta(days=n)).isoformat() if d else "?"
+
+def facts_scopes(p, pick_date=None):
+    """Separate scopes for the template facts: period aggregate (members) vs shown detail (transactions / filings), each with its time range."""
+    from .picks import NET_DAYS, MULTI_DAYS, RECENT_DAYS
+    pd_ = pick_date or p.get("public_date")
+    v4 = "net_amount" in p
+    agg_days = NET_DAYS if v4 else MULTI_DAYS
+    tx = p.get("tx") or []
+    return {"v4": v4, "agg_days": agg_days, "agg_from": _minus(pd_, agg_days), "to": pd_, "n_buyers": p.get("n_members", 0), "n_sellers": p.get("n_sellers", 0),
+            "det_days": RECENT_DAYS, "det_from": _minus(pd_, RECENT_DAYS), "n_tx": len(tx), "n_det_members": len({t["member"] for t in tx}),
+            "n_filings": len({t.get("doc_id") or t.get("pdf_url") for t in tx}), "shown": min(len(tx), SHOW_TX),
+            "amts": sorted({t["amount"] for t in tx if t.get("amount")})}
+
+def facts_line(p, lang="en", pick_date=None):
+    """Deterministic facts. Sentence 1 = period aggregate (members, AGG window). Sentence 2 = the listed detail rows (transactions + filings, RECENT window),
+    stating whether the rows shown are all rows or an excerpt. Members, transactions and filings are counted separately."""
+    s = facts_scopes(p, pick_date); all_ = s["shown"] >= s["n_tx"]; ex_zh = "" if all_ else f"（共 {s['n_tx']} 筆，僅列部分）"
     if lang == "en":
-        return f"{p['n_members']} member(s) disclosed {n} purchase transaction(s) of {p['ticker']} (amount ranges: {'; '.join(amts)}); public since {p['public_date']}."
-    return f"{p['n_members']} 位議員申報 {n} 筆 {p['ticker']} 買進交易（金額區間：{'；'.join(amts)}）；公開日 {p['public_date']}。"
+        a = (f"Last {s['agg_days']} days ({s['agg_from']} to {s['to']}, by filing date): {s['n_buyers']} member(s) net buying {p['ticker']}" + (f", {s['n_sellers']} net selling." if s['v4'] else ".")) if s["v4"] else \
+            f"Last {s['agg_days']} days ({s['agg_from']} to {s['to']}, by filing date): {s['n_buyers']} member(s) disclosed stock purchases of {p['ticker']}."
+        b = (f"Listed below: {'all ' if all_ else ''}{s['shown']}{'' if all_ else ' of ' + str(s['n_tx'])} stock purchase transaction(s) filed {s['det_from']} to {s['to']} (last {s['det_days']} days), "
+             f"from {s['n_det_members']} member(s) in {s['n_filings']} filing(s){' — an excerpt' if not all_ else ''}; amount ranges: {'; '.join(s['amts']) or '—'}. Latest public date {p['public_date']}.")
+        return a + " " + b
+    a = (f"近 {s['agg_days']} 天（依申報日 {s['agg_from']}～{s['to']}）有 {s['n_buyers']} 位議員淨買進 {p['ticker']}" + (f"、{s['n_sellers']} 位淨賣出。" if s['v4'] else "。")) if s["v4"] else \
+        f"近 {s['agg_days']} 天（依申報日 {s['agg_from']}～{s['to']}）有 {s['n_buyers']} 位議員申報買進 {p['ticker']} 股票。"
+    b = (f"以下列出{'全部 ' if all_ else ' '}{s['shown']} 筆{ex_zh}近 {s['det_days']} 天（{s['det_from']}～{s['to']}）申報的股票買進交易，"
+         f"來自 {s['n_det_members']} 位議員、{s['n_filings']} 份申報；金額區間：{'；'.join(s['amts']) or '—'}。最近公開日 {p['public_date']}。")
+    return a + b
 
 BAD_PATTERNS = [r"should (buy|sell)", r"recommend", r"\bbecause\b", r"\bdue to\b", r"insider", r"will (rise|fall|go up|go down|increase|decrease)", r"undervalued", r"good (pick|buy)", r"guarantee",
                 r"建議(買|賣|買進|賣出|投資)", r"因為", r"導致", r"內線", r"預期.*(上漲|下跌)", r"將(會)?(上漲|下跌)", r"值得(買|投資)", r"穩賺", r"獲利"]
@@ -71,7 +99,7 @@ def fill(limit=None):
                 if k in store and store[k].get("status") == "ok": continue
                 tx = "\n".join(f"- {t['member']}, {t['tx_date']}, {t['filing_date']}, {t['amount']}, {t['owner']}" for t in p["tx"])
                 user = USER_TEMPLATE.format(pick_date=e["pick_date"], ticker=p["ticker"], name=p["name"], tx_lines=tx,
-                                            members=", ".join(m["name"] for m in p["members"]), facts=facts_line(p))
+                                            members=", ".join(m["name"] for m in p["members"]), facts=facts_line(p, pick_date=e['pick_date']))
                 blob = user + " 45 2 1"                       # the 45-day window is allowed by the prompt rule
                 ok = None
                 for attempt in range(2):
