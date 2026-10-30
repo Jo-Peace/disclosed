@@ -110,8 +110,14 @@ def fetch_all(limit=None, refresh=False):
     done = 0
     for tk, sym in syms:
         prev = con.execute("SELECT status, fetched_at FROM price_fetch WHERE ticker=?", (tk,)).fetchone()
-        if prev and prev["status"] in ("ok", "not_found") and not refresh:
-            continue
+        if prev and not refresh:
+            # not_found is sticky; ok rows go stale after 12h so new closes get picked up daily
+            if prev["status"] == "not_found":
+                continue
+            if prev["status"] == "ok" and prev["fetched_at"]:
+                age = (dt.datetime.now() - dt.datetime.fromisoformat(prev["fetched_at"])).total_seconds()
+                if age < 12 * 3600:
+                    continue
         if limit is not None and done >= limit: break
         status, rows, err = yahoo_fetch(sym, refresh); src = "yahoo"
         if status != "ok" and os.environ.get("TIINGO_API_KEY"):

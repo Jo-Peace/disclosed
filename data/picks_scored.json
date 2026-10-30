@@ -9915,26 +9915,26 @@
    "chain_ok": true,
    "chain_msg": "ok",
    "version": "rules-v4-consensus-amount",
-   "n_events": 0,
-   "n_days": 0,
+   "n_events": 1,
+   "n_days": 1,
    "summary": {
     "from_public": {
      "5": {
       "n": 0,
       "insufficient": true,
-      "pending": 0,
+      "pending": 1,
       "no_prices": 0
      },
      "30": {
       "n": 0,
       "insufficient": true,
-      "pending": 0,
+      "pending": 1,
       "no_prices": 0
      },
      "90": {
       "n": 0,
       "insufficient": true,
-      "pending": 0,
+      "pending": 1,
       "no_prices": 0
      }
     },
@@ -9942,24 +9942,57 @@
      "5": {
       "n": 0,
       "insufficient": true,
-      "pending": 0,
+      "pending": 1,
       "no_prices": 0
      },
      "30": {
       "n": 0,
       "insufficient": true,
-      "pending": 0,
+      "pending": 1,
       "no_prices": 0
      },
      "90": {
       "n": 0,
       "insufficient": true,
-      "pending": 0,
+      "pending": 1,
       "no_prices": 0
      }
     }
    },
-   "events": []
+   "events": [
+    {
+     "ticker": "TSM",
+     "first_pick_date": "2026-10-30",
+     "public_date": "2026-10-22",
+     "score": 44,
+     "n_members": 3,
+     "from_public": {
+      "5": {
+       "status": "insufficient_data",
+       "entry_date": "2026-10-23"
+      },
+      "30": {
+       "status": "insufficient_data",
+       "entry_date": "2026-10-23"
+      },
+      "90": {
+       "status": "insufficient_data",
+       "entry_date": "2026-10-23"
+      }
+     },
+     "from_pick_date": {
+      "5": {
+       "status": "insufficient_data"
+      },
+      "30": {
+       "status": "insufficient_data"
+      },
+      "90": {
+       "status": "insufficient_data"
+      }
+     }
+    }
+   ]
   },
   "backtest_backtest_best": {
    "chain_ok": true,
@@ -23492,16 +23525,16 @@
    "chain_ok": true,
    "chain_msg": "ok",
    "version": "rules-v1",
-   "n_events": 5,
-   "n_days": 1,
+   "n_events": 6,
+   "n_days": 2,
    "summary": {
     "from_public": {
      "5": {
-      "n": 3,
+      "n": 4,
       "win_rate": 1.0,
-      "mean_excess": 0.05688507326032025,
-      "median_excess": 0.05611396985595163,
-      "se": 0.021394223818497614,
+      "mean_excess": 0.06625233410358095,
+      "median_excess": 0.07521722985203838,
+      "se": 0.017793312847912,
       "insufficient": true,
       "pending": 2,
       "no_prices": 0
@@ -23509,13 +23542,13 @@
      "30": {
       "n": 0,
       "insufficient": true,
-      "pending": 5,
+      "pending": 6,
       "no_prices": 0
      },
      "90": {
       "n": 0,
       "insufficient": true,
-      "pending": 5,
+      "pending": 6,
       "no_prices": 0
      }
     },
@@ -23523,19 +23556,19 @@
      "5": {
       "n": 0,
       "insufficient": true,
-      "pending": 5,
+      "pending": 6,
       "no_prices": 0
      },
      "30": {
       "n": 0,
       "insufficient": true,
-      "pending": 5,
+      "pending": 6,
       "no_prices": 0
      },
      "90": {
       "n": 0,
       "insufficient": true,
-      "pending": 5,
+      "pending": 6,
       "no_prices": 0
      }
     }
@@ -23702,6 +23735,43 @@
       "90": {
        "status": "insufficient_data",
        "entry_date": "2026-10-23"
+      }
+     },
+     "from_pick_date": {
+      "5": {
+       "status": "insufficient_data"
+      },
+      "30": {
+       "status": "insufficient_data"
+      },
+      "90": {
+       "status": "insufficient_data"
+      }
+     }
+    },
+    {
+     "ticker": "GH",
+     "first_pick_date": "2026-10-30",
+     "public_date": "2026-10-19",
+     "score": 37,
+     "n_members": 1,
+     "from_public": {
+      "5": {
+       "status": "ok",
+       "entry_date": "2026-10-20",
+       "entry_px": 162.59,
+       "exit_date": "2026-10-27",
+       "ret": 0.09514730303216679,
+       "spy_ret": 0.0007931863988037691,
+       "excess": 0.09435411663336302
+      },
+      "30": {
+       "status": "insufficient_data",
+       "entry_date": "2026-10-20"
+      },
+      "90": {
+       "status": "insufficient_data",
+       "entry_date": "2026-10-20"
       }
      },
      "from_pick_date": {
@@ -27587,26 +27657,26 @@
    "chain_ok": true,
    "chain_msg": "derived",
    "version": "overlap",
-   "n_events": 0,
-   "n_days": 0,
+   "n_events": 1,
+   "n_days": 1,
    "summary": {
     "from_public": {
      "5": {
       "n": 0,
       "insufficient": true,
-      "pending": 0,
+      "pending": 1,
       "no_prices": 0
      },
      "30": {
       "n": 0,
       "insufficient": true,
-      "pending": 0,
+      "pending": 1,
       "no_prices": 0
      },
      "90": {
       "n": 0,
       "insufficient": true,
-      "pending": 0,
+      "pending": 1,
       "no_prices": 0
      }
     },
@@ -27614,24 +27684,57 @@
      "5": {
       "n": 0,
       "insufficient": true,
-      "pending": 0,
+      "pending": 1,
       "no_prices": 0
      },
      "30": {
       "n": 0,
       "insufficient": true,
-      "pending": 0,
+      "pending": 1,
       "no_prices": 0
      },
      "90": {
       "n": 0,
       "insufficient": true,
-      "pending": 0,
+      "pending": 1,
       "no_prices": 0
      }
     }
    },
-   "events": []
+   "events": [
+    {
+     "ticker": "TSM",
+     "first_pick_date": "2026-10-30",
+     "public_date": "2026-10-22",
+     "score": 44,
+     "n_members": 3,
+     "from_public": {
+      "5": {
+       "status": "insufficient_data",
+       "entry_date": "2026-10-23"
+      },
+      "30": {
+       "status": "insufficient_data",
+       "entry_date": "2026-10-23"
+      },
+      "90": {
+       "status": "insufficient_data",
+       "entry_date": "2026-10-23"
+      }
+     },
+     "from_pick_date": {
+      "5": {
+       "status": "insufficient_data"
+      },
+      "30": {
+       "status": "insufficient_data"
+      },
+      "90": {
+       "status": "insufficient_data"
+      }
+     }
+    }
+   ]
   }
  },
  "baseline_all_purchases": {
