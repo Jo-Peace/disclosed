@@ -46,7 +46,7 @@ All four jobs run through one provider interface, so any role can be pointed at 
 
 ## Links
 
-- Demo video (≤ 2:30): `[DEMO_VIDEO_URL]`
+- Demo video (≤ 2:30): `https://youtu.be/W_GIBf6EMY4`
 - Live site: https://jo-peace.github.io/disclosed/
 - Source code: https://github.com/Jo-Peace/disclosed (MIT)
 - Screenshots: `screens/10_consensus_en.png`, `screens/14_picks_toggle_en.png`, `screens/15_trackrecord_compare_zh.png`
