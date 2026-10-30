@@ -13,9 +13,9 @@ Congress stock trades, read from scanned PDFs by Meta AI, explained in Chinese
 
 ## Description (~240 words)
 
-Members of the U.S. House must disclose their stock trades, but "public" doesn't mean usable. In 2026 alone there are 437 filings with 9,136 trades, spread across PDFs. 53 of them are scanned paper forms with stamps, hand-ticked boxes and no ticker symbols. Amounts are ranges, not share counts. And there was no tool at all for Traditional-Chinese readers.
+Members of the U.S. House must disclose their stock trades, but "public" doesn't mean usable. In 2026 alone there are 446 filings with 9,205 trades, spread across PDFs. 56 of them are scanned paper forms with stamps, hand-ticked boxes and no ticker symbols. Amounts are ranges, not share counts. And there was no tool at all for Traditional-Chinese readers.
 
-Disclosed (披露了) is a free, non-commercial, bilingual (繁體中文 / English) site that makes these records readable. Meta's Muse Spark model reads every scanned form (53 of 53, zero failures) and independently re-parses every text PDF. It agrees with our rule-based parser on 99.44% of rows, and the disagreements exposed a real parser bug. A three-role "MAGI" review then checks the data: a verifier, a risk reviewer and an explainer, all Meta-model roles. Each votes, and plain code (not AI) turns the votes into a confidence badge shown on 1,790 reviewed rows.
+Disclosed (披露了) is a free, non-commercial, bilingual (繁體中文 / English) site that makes these records readable. Meta's Muse Spark model reads every scanned form (56 of 56, zero failures) and independently re-parses every text PDF. It agrees with our rule-based parser on 99.44% of rows, and the disagreements exposed a real parser bug. A three-role "MAGI" review then checks the data: a verifier, a risk reviewer and an explainer, all Meta-model roles. Each votes, and plain code (not AI) turns the votes into a confidence badge shown on 1,790 reviewed rows.
 
 On top of the data:
 - A Congress Consensus board syncs each member's buys and sells and estimates net amounts from the disclosed ranges.
@@ -34,7 +34,7 @@ We're strict about honesty. Live picks are frozen into an append-only, hash-chai
 
 ## How we use Meta models
 
-1. **Vision parsing of scanned or paper filings.** Muse Spark receives the PDF and returns schema-constrained rows (owner, asset, buy/sell, dates, amount range, cap-gains flag), marking illegible rows itself. 53/53 filings → 5,539 rows.
+1. **Vision parsing of scanned or paper filings.** Muse Spark receives the PDF and returns schema-constrained rows (owner, asset, buy/sell, dates, amount range, cap-gains flag), marking illegible rows itself. 56/56 filings → 5,539 rows.
 2. **Independent cross-check of text PDFs.** It runs a second, independent parse of all 384 text filings, which reaches 99.44% full-row agreement (3,577/3,597) with the rule parser. Mismatches are surfaced per row.
 3. **MAGI three-role review.**
    - Three separate Meta-model roles each vote approve / flag / reject with a confidence: a data verifier, a risk reviewer (data caveats only, never market advice) and a bilingual plain-language explainer.
@@ -46,7 +46,7 @@ All four jobs run through one provider interface, so any role can be pointed at 
 
 ## Links
 
-- Demo video (≤ 2:30): `https://youtu.be/W_GIBf6EMY4`
+- Demo video (2:35): `https://youtu.be/W_GIBf6EMY4`
 - Live site: https://jo-peace.github.io/disclosed/
 - Source code: https://github.com/Jo-Peace/disclosed (MIT)
 - Screenshots: `screens/10_consensus_en.png`, `screens/14_picks_toggle_en.png`, `screens/15_trackrecord_compare_zh.png`
