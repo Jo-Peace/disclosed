@@ -12,7 +12,7 @@ from .score_picks import OUT as SCORED
 
 SITE = config.ROOT / "site"
 PRICE_FROM = "2026-01-01"
-TYPE = {"P": "P", "S": "S", "S (partial)": "SP", "E": "E"}
+TYPE = {"P": "P", "P (partial)": "P", "S": "S", "S (partial)": "SP", "E": "E"}
 
 def clean_name(a): return re.sub(r"\s*\[[A-Z0-9]{2}\]\s*$", "", a or "").strip()
 
@@ -45,7 +45,7 @@ def main():
     for t in con.execute("SELECT * FROM tx ORDER BY id"):
         f = fmap.get(t["doc_id"])
         if not f: continue
-        d = "P" if t["tx_type"] == "P" else "S" if t["tx_type"].startswith("S") else None
+        d = "P" if t["tx_type"].startswith("P") else "S" if t["tx_type"].startswith("S") else None
         pf = perf.get((t["doc_id"], t["ticker"], d)) if d and t["asset_type"] in LISTED_TYPES else None
         a = assets.get(t["ticker"])
         txs.append({"doc": t["doc_id"], "i": t["idx"], "m": member_id(f), "tk": t["ticker"], "a": clean_name(t["asset"]), "at": t["asset_type"], "ty": TYPE.get(t["tx_type"], t["tx_type"]),
@@ -54,6 +54,7 @@ def main():
                     "ps": {str(h): pf[h][1] for h in HORIZONS if pf and h in pf} if pf else None,
                     "el": 1 if (a and a["eligible"] and t["asset_type"] in LISTED_TYPES) else 0, "pdf": f["pdf_url"]})
         _x = txs[-1]
+        if t["tx_type"] == "P (partial)": _x["pt"] = 1
         _mg = magi.get((t["doc_id"], t["idx"]))
         if _mg: _x["cs"], _x["cf"], _x["dg"] = _mg[0], round(_mg[1], 2), _mg[2]
         if f["kind"] == "scanned":

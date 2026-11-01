@@ -34,9 +34,9 @@ def compute(con=None):
     con = con or connect()
     sd, sp = load_series(con, "SPY")
     if not sd: raise SystemExit("no SPY prices; run: python -m disclosed.prices fetch")
-    ev = con.execute(f"""SELECT t.doc_id, t.ticker, CASE WHEN t.tx_type='P' THEN 'P' ELSE 'S' END dir, f.filing_date
+    ev = con.execute(f"""SELECT t.doc_id, t.ticker, CASE WHEN t.tx_type LIKE 'P%' THEN 'P' ELSE 'S' END dir, f.filing_date
         FROM tx t JOIN filings f USING(doc_id) JOIN assets a ON a.ticker=t.ticker AND a.eligible=1
-        WHERE (t.tx_type='P' OR t.tx_type LIKE 'S%') AND t.asset_type IN ({','.join('?'*len(LISTED_TYPES))})
+        WHERE (t.tx_type LIKE 'P%' OR t.tx_type LIKE 'S%') AND t.asset_type IN ({','.join('?'*len(LISTED_TYPES))})
         GROUP BY 1,2,3""", LISTED_TYPES).fetchall()
     cache = {}
     con.execute("DELETE FROM performance")

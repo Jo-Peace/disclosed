@@ -15,6 +15,7 @@ MAIN = re.compile(
     rf"(?P<tx>{DATE})\s+(?P<nd>{DATE})\s*(?P<amt>.*?)\s*$")
 STATUS = re.compile(r"^\s*F\s+S\s*:\s*(?P<s>.*?)\s*$")
 AMT_TAIL = re.compile(r"\s{2,}(\$[\d,.]+(?:\s*-)?|Over|Over \$[\d,]+|Spouse/DC Over)\s*$")
+PRIVATE_TYPES = {"HN", "OI"}  # hedge/private funds, other investments: no exchange ticker
 TICKER = re.compile(r"\(([A-Z][A-Z0-9.\-/$]{0,9})\)")
 ATYPE = re.compile(r"\[([A-Za-z]{2,3})\]")
 AMT_FULL = re.compile(r"^(?:Spouse/DC\s+)?(?:\$(?P<lo>[\d,]+)\s*-\s*\$(?P<hi>[\d,]+)|Over\s+\$(?P<over>[\d,]+)|\$(?P<exact>[\d,]+(?:\.\d+)?))$")
@@ -73,6 +74,7 @@ def parse_text(text: str) -> tuple[list[Tx], int]:
             cur.amount_low, cur.amount_high, cur.amount_text = lo, hi, at
             tk = TICKER.findall(cur.asset); cur.ticker = tk[-1] if tk else None
             ty = ATYPE.findall(cur.asset); cur.asset_type = ty[-1] if ty else None
+            if cur.asset_type in PRIVATE_TYPES: cur.ticker = None  # e.g. "(ICAPITAL)" in a hedge-fund name is not a ticker
             out.append(cur)
         cur = None; amt_parts = []
 

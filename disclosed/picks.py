@@ -175,7 +175,7 @@ def build_picks_v1(con, pick_date, top_n=TOP_N):
     lo_multi = (dt.date.fromisoformat(pick_date) - dt.timedelta(days=MULTI_DAYS)).isoformat()
     rows = con.execute("""SELECT t.*, f.filing_date, f.last, f.first, f.suffix, f.state_dst, f.pdf_url, a.sample_name
         FROM tx t JOIN filings f USING(doc_id) JOIN assets a ON a.ticker=t.ticker AND a.eligible=1
-        WHERE t.tx_type='P' AND t.asset_type='ST' AND f.filing_date<=? AND f.filing_date>=?""", (pick_date, lo_multi)).fetchall()
+        WHERE t.tx_type LIKE 'P%' AND t.asset_type='ST' AND f.filing_date<=? AND f.filing_date>=?""", (pick_date, lo_multi)).fetchall()
     by = {}
     for r in rows: by.setdefault(r["ticker"], []).append(r)
     out = []

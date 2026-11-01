@@ -8,7 +8,7 @@ import datetime as dt, re
 from .names import member_id, member_name, name_key
 from .performance import LISTED_TYPES   # ("ST", "EF"): options / other instruments excluded (their amounts are not stock holdings)
 
-TYPES = {"P": "P", "S": "S", "S (partial)": "SP", "S(partial)": "SP"}
+TYPES = {"P": "P", "P (partial)": "P", "S": "S", "S (partial)": "SP", "S(partial)": "SP"}
 
 def clean_company(s):
     s = re.sub(r"\s*\[[A-Z0-9]{2}\]\s*$", "", s or "")
@@ -93,7 +93,7 @@ def _rows(con):
         rows = []
         for r in con.execute("""SELECT t.doc_id, t.idx, t.source, t.ticker, t.tx_type, t.tx_date, t.amount_low, t.amount_high, t.amount_text, t.owner, t.asset, t.asset_type,
                           f.first, f.last, f.suffix, f.state_dst, f.filing_date FROM transactions t JOIN filings f USING(doc_id)
-                          WHERE f.filing_type='P' AND t.tx_type IN ('P','S','S (partial)','S(partial)') AND t.ticker IS NOT NULL AND trim(t.ticker)!=''"""):
+                          WHERE f.filing_type='P' AND t.tx_type IN ('P','P (partial)','S','S (partial)','S(partial)') AND t.ticker IS NOT NULL AND trim(t.ticker)!=''"""):
             a = assets.get(r["ticker"])
             if r["source"] == ("rule" if r["doc_id"] in rule_docs else "meta") and a and a["eligible"] and r["asset_type"] in LISTED_TYPES: rows.append((r, a))
         _ROWS[k] = rows

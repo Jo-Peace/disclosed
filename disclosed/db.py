@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS transactions (
   idx INTEGER,              -- order inside the filing
   owner TEXT,               -- SP / DC / JT / '' (self)
   asset TEXT, ticker TEXT, asset_type TEXT,   -- asset_type e.g. ST, OP, CS
-  tx_type TEXT,             -- P | S | S(partial) | E
+  tx_type TEXT,             -- P | P (partial) | S | S(partial) | E
   tx_date TEXT, notif_date TEXT,              -- ISO
   amount_low INTEGER, amount_high INTEGER, amount_text TEXT,
   cap_gains_over_200 INTEGER,                 -- 1/0/NULL
