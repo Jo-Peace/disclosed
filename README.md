@@ -6,8 +6,8 @@
 
 > Free · non-commercial · no ads · **not investment advice.** Data comes only from official U.S. House Clerk disclosures. Every row links to its source PDF.
 
-- 🎬 **Demo video:** `[DEMO_VIDEO_URL — add before submission]`
-- 🌐 **Live site:** `[LIVE_SITE_URL — add before submission]` (a static build; also runs locally, see [Run it](#run-it))
+- 🎬 **Demo video:** https://youtu.be/W_GIBf6EMY4
+- 🌐 **Live site:** https://jo-peace.github.io/disclosed/ (a static build; also runs locally, see [Run it](#run-it))
 - 🏁 Built for the **Meta Global AI Developer Hackathon**, Indie Dev track.
 
 ![Congress Consensus board (English UI)](screens/10_consensus_en.png)
