@@ -1,0 +1,577 @@
+{
+ "members": {
+  "khanna-rohit-ca17": {
+   "status": "ok",
+   "zh_tw": "國會議員 Rohit Khanna 於 2026-02-06 至 2026-11-05 間提交了 10 份定期交易報告，共包含 4887 筆交易，涉及 MU、UBER、ACI、MSFT、HD、GEHC、ISRG、TENB 等標的，交易金額皆以區間表示。此資料為公開揭露資訊，非投資建議，且申報文件可能在交易後 45 天內提出。",
+   "en": "Member Rohit Khanna filed 10 periodic transaction reports containing 4887 transactions between 2026-02-06 and 2026-11-05, featuring tickers such as MU, UBER, ACI, MSFT, HD, GEHC, ISRG, and TENB with amounts shown as ranges. This is public disclosure data, not investment advice, and filings can be submitted up to 45 days after a trade.",
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "checked": true,
+   "check_model": "gemini-3.5-flash-lite",
+   "content_hash": "73103899b30d1ba7953f1414620e72a16e215b12e666f32ab86fb628c878d3d5",
+   "guardrail": "passed"
+  },
+  "cisneros-gilbert-ca31": {
+   "status": "ok",
+   "zh_tw": "議員 Gilbert Cisneros 於 2026 年 1 月 12 日至 2026 年 10 月 12 日期間提交了 10 份定期交易報告，共包含 940 筆交易，金額呈級距範圍。本資料僅為公開揭露資訊，非投資建議，申報文件可能在交易後 45 天內提交。",
+   "en": "Member Gilbert Cisneros filed 10 periodic transaction reports containing 940 transactions between January 12, 2026, and October 12, 2026, with amounts reported in ranges. This is public disclosure data, not investment advice, and filings can be filed up to 45 days after a trade.",
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "checked": true,
+   "check_model": "gemini-3.5-flash-lite",
+   "content_hash": "9736a8e4dbf08ae1a4e0302343173adcc2cd2f9de42c70b157000a2c0f40929c",
+   "guardrail": "passed"
+  },
+  "mccaul-michael-t-tx10": {
+   "status": "ok",
+   "zh_tw": "議員 Michael T. McCaul 於 2026-02-11 至 2026-10-14 間提交了 7 份定期交易報告，包含 724 筆交易，涉及 SPGI、INTU、WWD、AMZN 等多個代號，金額範圍見申報資料。這是公開揭露資料，非投資建議，且申報文件可能在交易後 45 天內提出。",
+   "en": "Member Michael T. McCaul filed 7 periodic transaction reports between 2026-02-11 and 2026-10-14 covering 724 transactions in tickers including SPGI, INTU, WWD, and AMZN with amounts shown in ranges. This is public disclosure data, not investment advice, and filings can be submitted up to 45 days after a trade.",
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "checked": true,
+   "check_model": "gemini-3.5-flash-lite",
+   "content_hash": "c91a193c695964b73d97317767684e4810c5a80c5254421792c170c05df72e44",
+   "guardrail": "passed"
+  },
+  "delaney-april-mcclain-md06": {
+   "status": "ok",
+   "zh_tw": "眾議員 April McClain Delaney 在 2026-01-05 至 2026-09-09 期間提交了 9 份定期交易報告，共包含 339 筆交易，涉及 CHRW、HUBB、VIK 等股票及金額範圍。本資料為公開揭露資訊，非投資建議，申報文件可能在交易後 45 天內提交。",
+   "en": "Representative April McClain Delaney filed 9 periodic transaction reports between 2026-01-05 and 2026-09-09, totaling 339 transactions involving tickers such as CHRW, HUBB, and VIK with various amount ranges. This is public disclosure data, not investment advice, and filings can be submitted up to 45 days after a trade.",
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "checked": true,
+   "check_model": "gemini-3.5-flash-lite",
+   "content_hash": "cc6215b019799e940b61c2a413ea83536f60678dac11ff1f5ad02d80fafb09ce",
+   "guardrail": "passed"
+  },
+  "letlow-julia-la05": {
+   "status": "ok",
+   "zh_tw": "議員 Julia Letlow 於 2026-01-13 至 2026-03-12 間提交了 2 份定期交易報告，包含 257 筆交易（164 筆買入、93 筆賣出），金額範圍為 $1,001 - $15,000。此為公開揭露資料，非投資建議，且申報期限可於交易完成後最多 45 天內提交。",
+   "en": "Member Julia Letlow filed 2 periodic transaction reports between 2026-01-13 and 2026-03-12 covering 257 transactions (164 purchases, 93 sales) with amounts ranging from $1,001 - $15,000. This is public disclosure data, not investment advice, and filings can be submitted up to 45 days after a trade.",
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "checked": true,
+   "check_model": "gemini-3.5-flash-lite",
+   "content_hash": "c90af6606351caeade2da237595e45fef1872ad73bae1f2e54952c7ba4f757e2",
+   "guardrail": "passed"
+  },
+  "hern-kevin-ok01": {
+   "status": "ok",
+   "zh_tw": "眾議員Kevin Hern於2026年1月22日至2026年10月28日期間提交了13份定期交易報告，共包含199筆交易，其中包括DVN和HD等股票。此為公開揭露資料，非投資建議，且申報文件可能在交易後最多45天內提交。",
+   "en": "Member Kevin Hern filed 13 periodic transaction reports containing 199 transactions between January 22, 2026, and October 28, 2026, featuring tickers such as DVN and HD. This is public disclosure data, not investment advice, and filings can be submitted up to 45 days after a trade.",
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "checked": true,
+   "check_model": "gemini-3.5-flash-lite",
+   "content_hash": "6131fe97cfd8ef1d4aee14734bc3350459ad83a8013d2fb93c65e75b0c0c4d1e",
+   "guardrail": "passed"
+  },
+  "taylor-david-j-oh02": {
+   "status": "ok",
+   "zh_tw": "眾議員 David J. Taylor 於 2026-01-21 至 2026-10-29 間提交了 18 份定期交易報告，包含 168 筆交易（97 筆買入、71 筆賣出），涉及交易包含 LRCX、MSFT、AVGO、MPC、PG、IBP、HD 及 GOOGL 等代號。本資料僅為公開揭露資訊，非投資建議，且申報檔案可能在交易後 45 天內提交。",
+   "en": "Member David J. Taylor filed 18 periodic transaction reports containing 168 transactions (97 purchases, 71 sales) between 2026-01-21 and 2026-10-29, with most-traded tickers including LRCX, MSFT, AVGO, MPC, PG, IBP, HD, and GOOGL. This is public disclosure data, not investment advice, and filings can be filed up to 45 days after a trade.",
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "checked": true,
+   "check_model": "gemini-3.5-flash-lite",
+   "content_hash": "1dd825d764898564c2a6b885a1c524a420d0c80a8bd0743be82c5b762c083bc2",
+   "guardrail": "passed"
+  },
+  "peters-scott-h-ca50": {
+   "status": "ok",
+   "zh_tw": "國會議員 Scott H. Peters 於 2026 年 1 月 19 日至 2026 年 10 月 15 日期間提交了 10 份定期交易報告，共包含 142 筆交易（77 筆買入、65 筆賣入），金額範圍見各筆申報。此資料僅為公開揭露資訊，非投資建議，且申報文件可能在交易後 45 天內提交。",
+   "en": "Member Scott H. Peters filed 10 periodic transaction reports between 2026-01-19 and 2026-10-15, covering 142 transactions (77 purchases and 65 sales) with amounts reported in ranges. This is public disclosure data, not investment advice, and filings can be submitted up to 45 days after a trade.",
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "checked": true,
+   "check_model": "gemini-3.5-flash-lite",
+   "content_hash": "d30833a5a89436a2e8a3315373477c684c2b6f77c038029006c0c5b708b271f1",
+   "guardrail": "passed"
+  },
+  "johnson-julie-tx32": {
+   "status": "ok",
+   "zh_tw": "眾議員 Julie Johnson (TX32) 於 2026 年 1 月 15 日至 2026 年 8 月 5 日間提交了 3 份定期交易報告，共包含 141 筆交易（38 筆買入、102 筆賣出），金額呈區間顯示。這是公開揭露資料，非投資建議，且申報文件可能在交易後 45 天內提出。",
+   "en": "Representative Julie Johnson (TX32) filed 3 periodic transaction reports between 2026-01-15 and 2026-08-05, covering 141 transactions (38 purchases, 102 sales) with amounts shown as ranges. This is public disclosure data, not investment advice, and filings can be submitted up to 45 days after a trade.",
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "checked": true,
+   "check_model": "gemini-3.5-flash-lite",
+   "content_hash": "2d062ab3843e924530c8f086d27a165fc1036ca028795c0d70d69e57b22060a8",
+   "guardrail": "passed"
+  },
+  "harshbarger-diana-tn01": {
+   "status": "ok",
+   "zh_tw": "國會議員 Diana Harshbarger 於 2026-05-06 至 2026-10-27 間提交了 17 份定期交易報告，共包含 133 筆交易（105 筆買入、26 筆賣出），金額範圍介於 $15,001 至 $100,000。此為公開揭露資料，非投資建議，且申報文件可能在交易後 45 天內提出。",
+   "en": "Member Diana Harshbarger filed 17 periodic transaction reports between 2026-05-06 and 2026-10-27, covering 133 transactions (105 purchases and 26 sales) with amounts ranging from $15,001 to $100,000. This is public disclosure data, not investment advice, and filings can be submitted up to 45 days after a trade.",
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "checked": true,
+   "check_model": "gemini-3.5-flash-lite",
+   "content_hash": "8890091e8455c694bf2242bd3dded4f41579ca1a22d2fdae452b4e65985dcea5",
+   "guardrail": "passed"
+  },
+  "gottheimer-josh-nj05": {
+   "status": "ok",
+   "zh_tw": "議員 Josh Gottheimer 於 2026 年 1 月 14 日至 2026 年 11 月 5 日期間提交了 11 份定期交易報告，共包含 127 筆交易（51 筆買入、76 筆賣出），其中包括交易代碼 MSFT、AMAT 和 MCD 等，金額範圍介於 $1,001 至 $1,000,000 之間。此為公開揭露資料，非投資建議，且申報文件可能在交易後 45 天內提交。",
+   "en": "Representative Josh Gottheimer filed 11 periodic transaction reports between January 14, 2026, and November 5, 2026, covering 127 transactions (51 purchases, 76 sales) involving tickers such as MSFT, AMAT, and MCD with amount ranges between $1,001 and $1,000,000. This is public disclosure data, not investment advice, and filings may be submitted up to 45 days after a trade.",
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "checked": true,
+   "check_model": "gemini-3.5-flash-lite",
+   "content_hash": "0fc587c2620db1e1b3b2f006dc4352183b2eee5856acb323559218fc9fb6519a",
+   "guardrail": "passed"
+  },
+  "salazar-maria-elvira-fl27": {
+   "status": "ok",
+   "zh_tw": "議員 Maria Elvira Salazar 於 2026-04-21 至 2026-11-05 間提交了 8 份定期交易報告，共包含 126 筆交易（77 筆買入、49 筆賣出），涉及 BEP、GLW、CSCO、IBM、BIIB、UNH、CB、BRK.B、PG、NVDA、URI 與 SPCX 等代號，金額範圍多為 $1,001 - $15,000。此資料為公開揭露資訊，非投資建議，且申報文件可能在交易後 45 天內提交。",
+   "en": "Member Maria Elvira Salazar filed 8 periodic transaction reports between 2026-04-21 and 2026-11-05 covering 126 transactions (77 purchases and 49 sales) with tickers such as BEP, GLW, CSCO, IBM, BIIB, UNH, CB, BRK.B, PG, NVDA, URI, and SPCX, involving amount ranges mostly between $1,001 - $15,000. This is public disclosure data, not investment advice, and filings can be filed up to 45 days after a trade.",
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "checked": true,
+   "check_model": "gemini-3.5-flash-lite",
+   "content_hash": "245d4ae97f5426bb80a50a35e99317f562e1d98552b1390c652935b63def9905",
+   "guardrail": "passed"
+  },
+  "moskowitz-jared-fl23": {
+   "status": "ok",
+   "zh_tw": "美國眾議員Jared Moskowitz在2026年1月16日至2026年8月27日期間提交了6份定期交易報告，共包含84筆交易，其中包括COR、AMAT、MNST等標的，金額範圍為$1,001 - $15,000。此資料僅為公開揭露資訊，非投資建議，且申報文件可能在交易後45天內提交。",
+   "en": "Representative Jared Moskowitz filed 6 periodic transaction reports containing 84 transactions between January 16, 2026, and August 27, 2026, involving tickers such as COR, AMAT, and MNST with amounts ranging from $1,001 to $15,000. This is public disclosure data and not investment advice, and filings may be submitted up to 45 days after a trade.",
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "checked": true,
+   "check_model": "gemini-3.5-flash-lite",
+   "content_hash": "6b94d18b1cf6d92d4ece7d86cfa43faba0337b914bb685b6e8c1eee9ae1c8d6d",
+   "guardrail": "passed"
+  },
+  "kean-thomas-h-nj07": {
+   "status": "ok",
+   "zh_tw": "眾議員 Thomas H. Kean Jr 於 2026 年 1 月 16 日至 2026 年 10 月 30 日期間提交了 10 份定期交易報告，共包含 70 筆交易，涉及 JNJ、GOOGL、SYK 等代號，金額介於 $1,001 至 $50,000 不等。此為公開揭露資料，非投資建議，申報文件可能在交易後 45 天內提交。",
+   "en": "Representative Thomas H. Kean Jr filed 10 periodic transaction reports containing 70 transactions between January 16, 2026, and October 30, 2026, involving tickers such as JNJ, GOOGL, and SYK, with amounts ranging from $1,001 to $50,000. This is public disclosure data and not investment advice; filings may be submitted up to 45 days after a trade.",
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "checked": true,
+   "check_model": "gemini-3.5-flash-lite",
+   "content_hash": "ff4e41503bd944ef4816805a6985104fc9ec6b8b87b06248db4cde7c59622ae4",
+   "guardrail": "passed"
+  },
+  "biggs-sheri-sc03": {
+   "status": "ok",
+   "zh_tw": "眾議員 Sheri Biggs 於 2026 年 1 月 14 日至 2026 年 10 月 27 日期間提交了 9 份定期交易報告，共包含 68 筆交易（43 筆買入、25 筆賣出），金額範圍涵蓋 $1,001 至 $1,000,000。本資料僅為公開揭露資訊，並非投資建議，且申報檔案可能在交易後 45 天內提交。",
+   "en": "Representative Sheri Biggs filed 9 periodic transaction reports between January 14, 2026, and October 27, 2026, detailing 68 transactions consisting of 43 purchases and 25 sales with amount ranges spanning $1,001 to $1,000,000. This is public disclosure data and not investment advice, and filings may be submitted up to 45 days after a trade.",
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "checked": true,
+   "check_model": "gemini-3.5-flash-lite",
+   "content_hash": "1ce6ab71f7e9aa2af4dd7055153af9968103797dc4d6c11c96a386a72ec34d4d",
+   "guardrail": "passed"
+  },
+  "mccormick-richard-dean-dr-ga06": {
+   "status": "ok",
+   "zh_tw": "眾議員 Richard Dean McCormick 在 2026-04-07 至 2026-10-14 期間提交了 5 份定期交易報告，共包含 64 筆交易，交易金額皆為區間範圍。本資料僅為公開揭露資訊，非投資建議，且申報文件可能在交易後 45 天內才提交。",
+   "en": "Representative Richard Dean McCormick filed 5 periodic transaction reports containing 64 transactions between 2026-04-07 and 2026-10-14, with amounts reported as ranges. This is public disclosure data, not investment advice, and filings can be submitted up to 45 days after a trade.",
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "checked": true,
+   "check_model": "gemini-3.5-flash-lite",
+   "content_hash": "f452034b9e5a6c61f6c6dbb874c0c0dfec16b80b642154532daac979608e9459",
+   "guardrail": "passed"
+  },
+  "wied-tony-wi08": {
+   "status": "ok",
+   "zh_tw": "國會議員 Tony Wied 於 2026-03-09 至 2026-10-02 間提交了 6 份定期交易報告，共包含 53 筆交易，涉及 TTD、NOW 等多個代碼且金額皆為區間。此乃公開揭露資料，非投資建議，且申報文件可能在交易後 45 天內提交。",
+   "en": "Member Tony Wied filed 6 periodic transaction reports between 2026-03-09 and 2026-10-02 covering 53 transactions with tickers such as TTD and NOW in stated amount ranges. This is public disclosure data, not investment advice, and filings can be filed up to 45 days after a trade.",
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "checked": true,
+   "check_model": "gemini-3.5-flash-lite",
+   "content_hash": "72362b6e46a812aefd567c009003510d5b57790b484afd74dc58a0103cdbf2f5",
+   "guardrail": "passed"
+  },
+  "jackson-jonathan-il01": {
+   "status": "ok",
+   "zh_tw": "眾議員 Jonathan Jackson 於 2026 年 1 月 8 日至 2026 年 10 月 19 日期間提交了 9 份定期交易報告，共包含 50 筆交易，涉及 THC、C、VSAT 等代號。本資訊為公開揭露資料，非投資建議，且申報文件可能在交易後 45 天內提交，金額僅為級距範圍。",
+   "en": "Representative Jonathan Jackson filed 9 periodic transaction reports comprising 50 transactions between January 8, 2026, and October 19, 2026, involving tickers such as THC, C, and VSAT. This is public disclosure data, not investment advice, and filings can be submitted up to 45 days after a trade with amounts shown as ranges.",
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "checked": true,
+   "check_model": "gemini-3.5-flash-lite",
+   "content_hash": "52d2b7d56fe994f6857c7d4ac8dc69abbee5c6422448fb71339c40c4543474be",
+   "guardrail": "passed"
+  },
+  "newhouse-dan-wa04": {
+   "status": "ok",
+   "zh_tw": "眾議員 Dan Newhouse 在 2026-01-15 至 2026-07-17 間提交了 2 份定期交易報告，共包含 50 筆交易，金額範圍為 $1,001 - $15,000。此資料僅為公開揭露資訊，非投資建議，且申報期限可能在交易後 45 天內完成。",
+   "en": "Representative Dan Newhouse filed 2 periodic transaction reports between 2026-01-15 and 2026-07-17 covering 50 transactions, with amounts ranging from $1,001 - $15,000. This is public disclosure data, not investment advice, and filings can be filed up to 45 days after a trade.",
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "checked": true,
+   "check_model": "gemini-3.5-flash-lite",
+   "content_hash": "266ae127d72faefa41a3c8d25ad510a68823b67dcdfd6ed66ec02009b8b98e2f",
+   "guardrail": "passed"
+  },
+  "morrison-kelly-louise-mn03": {
+   "status": "ok",
+   "zh_tw": "議員 Kelly Louise Morrison 於 2026-01-20 至 2026-08-25 間提交了 14 份定期交易報告，包含 49 筆交易，涉及 ASHGY、MBGL、ACN、AJG、MICC、SOLS 與 HONAV 等代碼。此資料僅為公開揭露資訊，非投資建議，且申報文件可能在交易後 45 天內才送達。",
+   "en": "Member Kelly Louise Morrison filed 14 periodic transaction reports containing 49 transactions between 2026-01-20 and 2026-08-25, featuring tickers such as ASHGY, MBGL, ACN, AJG, MICC, SOLS, and HONAV. This is public disclosure data, not investment advice, and filings can be submitted up to 45 days after a trade.",
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "checked": true,
+   "check_model": "gemini-3.5-flash-lite",
+   "content_hash": "4ccd11f2056597466d235769df8a3637872903fe7da31687ce7013e7fd6c2264",
+   "guardrail": "passed"
+  },
+  "donalds-byron-fl19": {
+   "status": "ok",
+   "zh_tw": "眾議員 Byron Donalds 於 2026-01-07 至 2026-09-15 間提交了 8 份定期交易報告，包含 45 筆交易，涉及 TTD、NFLX 等股票，金額區間為 $1,001 - $15,000。此為公開揭露資料，非投資建議，且申報文件可能在交易後 45 天內提出。",
+   "en": "Representative Byron Donalds filed 8 periodic transaction reports containing 45 transactions from 2026-01-07 to 2026-09-15, involving tickers such as TTD and NFLX with amount ranges of $1,001 - $15,000. This is public disclosure data, not investment advice, and filings can be submitted up to 45 days after a trade.",
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "checked": true,
+   "check_model": "gemini-3.5-flash-lite",
+   "content_hash": "8b6b5675e165bbe74fb4e716c3bd65ea29b4dc577f26aeca01a9c6077f70e20f",
+   "guardrail": "passed"
+  },
+  "fields-cleo-la06": {
+   "status": "ok",
+   "zh_tw": "議員 Cleo Fields 在 2026-01-16 至 2026-10-22 期間提交了 13 份定期交易報告，共包含 40 筆交易（36 筆買入、4 筆賣出），交易金額皆為範圍。此為公開揭露資料，非投資建議，且申報文件可能在交易後 45 天內提交。",
+   "en": "Representative Cleo Fields filed 13 periodic transaction reports covering 40 transactions (36 purchases, 4 sales) between 2026-01-16 and 2026-10-22, with all amounts reported as ranges. This is public disclosure data, not investment advice, and filings can be submitted up to 45 days after a trade.",
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "checked": true,
+   "check_model": "gemini-3.5-flash-lite",
+   "content_hash": "8063cc4f496994de4a07b8f6659051f6f86c06e71cd8bab71f0845c3b854cc51",
+   "guardrail": "passed"
+  },
+  "fleischmann-charles-j-chuck-tn03": {
+   "status": "ok",
+   "zh_tw": "眾議員 Charles J. \"Chuck\" Fleischmann 於 2026年2月9日至2026年8月12日期間提交了 5 份定期交易報告，共包含 40 筆交易（23 筆買入、17 筆賣出），金額呈區間顯示。此為公開揭露資料，非投資建議，且申報文件可能在交易後 45 天內提交。",
+   "en": "Representative Charles J. \"Chuck\" Fleischmann filed 5 periodic transaction reports between 2026-02-09 and 2026-08-12, covering 40 transactions (23 purchases, 17 sales) with amounts shown as ranges. This is public disclosure data, not investment advice, and filings can be submitted up to 45 days after a trade.",
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "checked": true,
+   "check_model": "gemini-3.5-flash-lite",
+   "content_hash": "aa519a8f9b9cd801cb64753e904f33643241c9cc70b3f7f74021ced2e54dbbd9",
+   "guardrail": "passed"
+  },
+  "rulli-michael-oh06": {
+   "status": "ok",
+   "zh_tw": "眾議員 Michael Rulli 於 2026-08-07 至 2026-10-19 間提交了 5 份定期交易報告，共包含 40 筆交易，金額皆以區間表示。此為公開揭露資料，非投資建議，申報期限可能在交易後 45 天內。",
+   "en": "Representative Michael Rulli filed 5 periodic transaction reports containing 40 transactions between 2026-08-07 and 2026-10-19, with amounts reported in ranges. This is public disclosure data, not investment advice, and filings can be submitted up to 45 days after a trade.",
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "checked": true,
+   "check_model": "gemini-3.5-flash-lite",
+   "content_hash": "5a089b28b8063d54bd068518abeeaf57cf24021c9c9b14643c8b83c064278fc8",
+   "guardrail": "passed"
+  },
+  "delbene-suzan-k-wa01": {
+   "status": "ok",
+   "zh_tw": "國會議員 Suzan K. DelBene 於 2026 年 1 月 12 日至 2026 年 10 月 28 日期間提交了 13 份定期交易報告，共包含 39 筆交易（18 筆買入、21 筆賣出），金額範圍涵蓋 $15,001 至 $500,000。此資料僅為公開揭露資訊，非投資建議，且申報文件可能在交易後 45 天內提交。",
+   "en": "Member Suzan K. DelBene filed 13 periodic transaction reports between January 12, 2026, and October 28, 2026, detailing 39 transactions (18 purchases, 21 sales) with amounts ranging from $15,001 to $500,000. This is public disclosure data, not investment advice, and filings can be filed up to 45 days after a trade.",
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "checked": true,
+   "check_model": "gemini-3.5-flash-lite",
+   "content_hash": "34374e03f8a1f25764d513b79538e501e9f0d47b7240ec1008dfe5171d2c48a8",
+   "guardrail": "passed"
+  },
+  "sessions-pete-tx17": {
+   "status": "ok",
+   "zh_tw": "眾議員 Pete Sessions 於 2026 年 3 月 9 日至 2026 年 10 月 27 日期間提交了 5 份定期交易報告，共計 37 筆出售交易，涉及 MCD、AMZN、COST、VZ、TJX、AAPL、DIS、LOW 等股票，金額介於 $344.99 至 $50,000 不等。此資料僅為公開揭露資訊，非投資建議，且申報文件可能在交易後 45 天內提交。",
+   "en": "Representative Pete Sessions filed 5 periodic transaction reports between March 9, 2026, and October 27, 2026, covering 37 sales transactions across tickers such as MCD, AMZN, COST, VZ, TJX, AAPL, DIS, and LOW with amounts ranging from $344.99 to $50,000. This is public disclosure data, not investment advice, and filings can be filed up to 45 days after a trade.",
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "checked": true,
+   "check_model": "gemini-3.5-flash-lite",
+   "content_hash": "f27a8b0387bbb43f44089b173aaf7ec93cef18f3c083234dff2137541b464cf3",
+   "guardrail": "passed"
+  },
+  "moore-tim-nc14": {
+   "status": "ok",
+   "zh_tw": "國会議員 Tim Moore 在 2026-01-07 至 2026-08-20 期間提交了 9 份定期交易報告，共包含 35 筆交易，涉及 T、LGIH、HOG 等股票，交易金額皆為區間。本資料僅為公開揭露紀錄，非投資建議，且申報期限可能在交易後 45 天內完成。",
+   "en": "Representative Tim Moore filed 9 periodic transaction reports containing 35 transactions between 2026-01-07 and 2026-08-20, involving tickers such as T, LGIH, and HOG with amounts reported in ranges. This is public disclosure data, not investment advice, and filings can be filed up to 45 days after a trade.",
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "checked": true,
+   "check_model": "gemini-3.5-flash-lite",
+   "content_hash": "b9cce431eb01cd49678d831ca3cdabde213b8a103375a343a5385c7872cd7008",
+   "guardrail": "passed"
+  },
+  "allen-richard-w-ga12": {
+   "status": "ok",
+   "zh_tw": "議員 Richard W. Allen 在 2026-01-15 至 2026-10-14 期間提交了 10 份定期交易報告，包含 32 筆交易，涉及 INTU、TSM、AVGO 等股票，金額皆為範圍。此為公開揭露資料，非投資建議，且申報文件可能在交易後 45 天內提交。",
+   "en": "Member Richard W. Allen filed 10 periodic transaction reports containing 32 transactions between 2026-01-15 and 2026-10-14, covering tickers such as INTU, TSM, and AVGO with amounts shown as ranges. This is public disclosure data, not investment advice, and filings can be submitted up to 45 days after a trade.",
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "checked": true,
+   "check_model": "gemini-3.5-flash-lite",
+   "content_hash": "219e4bd031f8ec88f67fdfbfd844b65592e6c3222c599d475637e6a4f486522f",
+   "guardrail": "passed"
+  },
+  "pelosi-nancy-ca11": {
+   "status": "ok",
+   "zh_tw": "眾議員 Nancy Pelosi 於 2026 年 1 月 23 日至 2026 年 11 月 6 日期間提交了 5 份定期交易報告，共包含 29 筆交易，其中包括 BE、INTC、NVDA 等代號的買賣。這些資料為公開揭露資訊，非投資建議，且申報檔案可能在交易後 45 天內提交。",
+   "en": "Representative Nancy Pelosi filed 5 periodic transaction reports covering 29 transactions between January 23, 2026, and November 6, 2026, including trades in tickers such as BE, INTC, and NVDA. This is public disclosure data, not investment advice, and filings can be submitted up to 45 days after a trade.",
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "checked": true,
+   "check_model": "gemini-3.5-flash-lite",
+   "content_hash": "cb480abf31fd75212b87437a4632fad0db70eb75b380de28a805b3c341cfdd2e",
+   "guardrail": "passed"
+  },
+  "kelly-mike-pa16": {
+   "status": "ok",
+   "zh_tw": "議員 Mike Kelly 於 2026 年 1 月 8 日至 2026 年 11 月 4 日期間提交了 12 份定期交易報告，共包含 25 筆交易，金額範圍介於 1,001 美元至 100,000 美元之間。本資料僅為公開揭露資訊，非投資建議，且申報檔案可能在交易發生後最多 45 天內提交。",
+   "en": "Member Mike Kelly filed 12 periodic transaction reports between January 8, 2026, and November 4, 2026, covering 25 transactions with amounts ranging from $1,001 to $100,000. This is public disclosure data, not investment advice, and filings can be submitted up to 45 days after a trade.",
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "checked": true,
+   "check_model": "gemini-3.5-flash-lite",
+   "content_hash": "0241698ca3db9a79a69a48aac8333de876b0790ccf7edfd379db609db08a1e8b",
+   "guardrail": "passed"
+  },
+  "self-keith-alan-tx03": {
+   "status": "ok",
+   "zh_tw": "眾議員Keith Alan Self於2026年6月30日提交了1份定期交易報告，內含5筆交易，涉及PEP、NVDA、MRK、GPC等股票，金額區間為$1,001 - $15,000。此為公開揭露資料，非投資建議，且申報文件可能在交易後45天內提交。",
+   "en": "Representative Keith Alan Self filed 1 periodic transaction report on 2026-06-30 covering 5 transactions, including tickers such as PEP, NVDA, MRK, and GPC, with amounts ranging from $1,001 - $15,000. This is public disclosure data, not investment advice, and filings can be submitted up to 45 days after a trade.",
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "checked": true,
+   "check_model": "gemini-3.5-flash-lite",
+   "content_hash": "17bc7660c4b384247ec0694fbbcf219d30ec55a9d0b985aa2427fcbfdbfa54d3",
+   "guardrail": "passed"
+  },
+  "mann-tracey-robert-ks01": {
+   "status": "ok",
+   "zh_tw": "眾議員Tracey Mann於2026年8月13日提交了1份定期交易報告，包含10筆交易，其中包括交易代號NVDA、META和MSFT等，金額範圍介於$1,001至$15,000之間。本資料僅為公開揭露資訊，非投資建議，且申報檔案可能在交易後最多45天內提交。",
+   "en": "Representative Tracey Mann filed 1 periodic transaction report on August 13, 2026, containing 10 transactions involving tickers such as NVDA, META, and MSFT, with amounts ranging from $1,001 to $15,000. This is public disclosure data, not investment advice, and filings can be filed up to 45 days after a trade.",
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "checked": true,
+   "check_model": "gemini-3.5-flash-lite",
+   "content_hash": "deab08c819130a8454baacc14d1c4b51e1ce99db979e6c70bdf0120be2900051",
+   "guardrail": "passed"
+  }
+ },
+ "picks": {
+  "2026-11-10|BE": {
+   "status": "ok",
+   "zh_tw": "議員Rohit Khanna於2026年11月5日披露了針對BE的兩筆購買交易，金額範圍介於$1,001至$15,000之間。本資料僅為公開披露資訊，非投資建議，且申報文件可能在交易後最多45日內提交。",
+   "en": "Member Rohit Khanna disclosed two purchases of BE on November 5, 2026, with amounts ranging from $1,001 to $15,000. This is public disclosure data, not investment advice, and filings can be filed up to 45 days after a trade.",
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "checked": true,
+   "check_model": "gemini-3.5-flash-lite",
+   "content_hash": "cd2c08c92641f3fa04b75db7394ea550c9d981a3f9d3e83fbdef8ead9c6adbc2",
+   "guardrail": "passed"
+  },
+  "2026-11-10|ACN": {
+   "status": "ok",
+   "zh_tw": "眾議員Rohit Khanna於2026年11月5日申報了一筆於2026年10月13日進行的ACN股票交易，金額範圍為$15,001 - $50,000。此為公開揭露資料，非投資建議，且申報可能在交易後最多45天內提交。",
+   "en": "Representative Rohit Khanna filed a transaction for ACN on November 5, 2026, dated October 13, 2026, with an amount range of $15,001 - $50,000. This is public disclosure data, not investment advice, and filings can be filed up to 45 days after a trade.",
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "checked": true,
+   "check_model": "gemini-3.5-flash-lite",
+   "content_hash": "b2b5dfd6ae331c12861e51068d6898de25747072343493f71cecb91eb24dc2bd",
+   "guardrail": "passed"
+  },
+  "2026-11-10|ON": {
+   "status": "ok",
+   "zh_tw": "議員Rohit Khanna於2026年11月5日公開披露了代號ON的股票買入交易，金額介於$1,001至$15,000之間。本資料僅為公開申報紀錄，非投資建議，且申報期限可於交易後最多45天內完成。",
+   "en": "Member Rohit Khanna publicly disclosed stock purchases for ON on November 5, 2026, with amounts ranging from $1,001 to $15,000. This is public disclosure data and not investment advice, and filings can be submitted up to 45 days after a trade.",
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "checked": true,
+   "check_model": "gemini-3.5-flash-lite",
+   "content_hash": "3dc0f3089c5ab4190f0a67cd87274e8803e79ac6c90937a78ad913a330ba9f6b",
+   "guardrail": "passed"
+  },
+  "2026-11-10|ISRG": {
+   "status": "ok",
+   "zh_tw": "眾議員Rohit Khanna於2026年11月5日申報於2026年10月2日買進金額介於$1,001至$15,000的ISRG股票，另有Michael T. McCaul列於同一名單中。此為公開揭露資料，非投資建議，且申報可能在交易後最多45天內提交。",
+   "en": "Representative Rohit Khanna disclosed a purchase of ISRG stock ranging from $1,001 to $15,000 made on October 2, 2026, and filed on November 5, 2026, with Michael T. McCaul also listed in this pick. This is public disclosure data and not investment advice, and filings may be submitted up to 45 days after a trade.",
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "checked": true,
+   "check_model": "gemini-3.5-flash-lite",
+   "content_hash": "a77d94b5d307c8c79d541a2e87f9db7d99a849d29d8aac60332c3fde0be44117",
+   "guardrail": "passed"
+  },
+  "2026-11-10|BHE": {
+   "status": "ok",
+   "zh_tw": "眾議員Josh Gottheimer於2026年11月5日申報，在2026年10月12日買進價值$1,001 - $15,000的Benchmark Electronics, Inc.（代號：BHE）股票。本資料僅為公開申報紀錄，非投資建議，且議員依法可在交易後最多45日內提交申報。",
+   "en": "Representative Josh Gottheimer filed on November 5, 2026, for a purchase of Benchmark Electronics, Inc. (ticker: BHE) stock made on October 12, 2026, in the amount range of $1,001 - $15,000. This is public disclosure data, not investment advice, and filings can be submitted up to 45 days after a trade.",
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "checked": true,
+   "check_model": "gemini-3.5-flash-lite",
+   "content_hash": "019930c0bfb084500510631e394cffca8f00f8e6be4afec06b84c8f1aaf76a15",
+   "guardrail": "passed"
+  },
+  "2026-11-10|ABT": {
+   "status": "rejected",
+   "error": "Gemini fact-check rejected: {'consistent': False, 'invented_facts': ['Gilbert Cisneros disclosed stock purchases of ABT between 2026-10-27 and 2026-11-10'], 'has_disclaimer': True, 'ok_to_publish': False}",
+   "content_hash": "630d83c25e231ab6b24557e253ab15424642790a7f15d2cc4ae021fb76d2a7ce"
+  },
+  "2026-11-10|TXN": {
+   "status": "ok",
+   "zh_tw": "眾議員 Thomas H. Kean Jr 與 Rohit Khanna 在 2026 年 10 月 27 日至 2026 年 11 月 10 日期間，披露了 3 筆金額介於 $1,001 至 $50,000 的 TXN 股票購買交易。此為公開揭露資料，非投資建議，申報文件可能在交易後 45 天內提交。",
+   "en": "Representatives Thomas H. Kean Jr and Rohit Khanna disclosed 3 purchases of TXN stock ranging from $1,001 to $50,000 between October 27, 2026, and November 10, 2026. This is public disclosure data, not investment advice, and filings can be submitted up to 45 days after a trade.",
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "checked": true,
+   "check_model": "gemini-3.5-flash-lite",
+   "content_hash": "0251087228d0c211f2166d838deab73f912fddd1defd475e9e55eef73d2f1f0e",
+   "guardrail": "passed"
+  },
+  "2026-11-10|NVDA": {
+   "status": "ok",
+   "zh_tw": "眾議員 Maria Elvira Salazar 於 2026 年 11 月 5 日申報了 NVDA 的買入交易，金額範圍介於 $1,001 至 $15,000 美元。此資訊為公開揭露資料，非投資建議，且申報可能在交易完成後最多 45 天內提交。",
+   "en": "Representative Maria Elvira Salazar disclosed purchases of NVDA on November 5, 2026, with amount ranges between $1,001 and $15,000. This is public disclosure data, not investment advice, and filings can be filed up to 45 days after a trade.",
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "checked": true,
+   "check_model": "gemini-3.5-flash-lite",
+   "content_hash": "daea3599d5d145a7350a0b4606278f1c6c721ec0f75d08806f0b2879de6599cb",
+   "guardrail": "passed"
+  }
+ },
+ "vision": {
+  "9116361": {
+   "status": "ok",
+   "doc_id": "9116361",
+   "member_id": "wied-tony-wi08",
+   "member": "Tony Wied",
+   "state_dst": "WI08",
+   "filing_date": "2026-10-02",
+   "pdf": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/9116361.pdf",
+   "zh_tw": "這是Tony Wied的美國眾議院定期交易報告的第一頁，列出了財務交易。",
+   "en": "Page 1 of a US House Periodic Transaction Report for Tony Wied, listing financial transactions.",
+   "rows": [
+    {
+     "asset_name": "SERVICENOW INC",
+     "amount_range": "$100 001 - $250 000",
+     "tx_date": "09/17/26",
+     "tx_type": "Partial"
+    },
+    {
+     "asset_name": "THE TRADE DESK INC CLASS A",
+     "amount_range": "$15 001 - $50 000",
+     "tx_date": "09/17/26",
+     "tx_type": "Partial"
+    },
+    {
+     "asset_name": "UPSTART HLDGS INC",
+     "amount_range": "$15 001 - $50 000",
+     "tx_date": "09/17/26",
+     "tx_type": "Partial"
+    },
+    {
+     "asset_name": "CHIPOTLE MEXICAN GRILL I",
+     "amount_range": "$15 001 - $50 000",
+     "tx_date": "09/17/26",
+     "tx_type": "Partial"
+    }
+   ],
+   "compare": {
+    "n_vision_rows": 4,
+    "n_db_rows": 4,
+    "name_overlaps": 4,
+    "date_overlaps": 0,
+    "agrees": true
+   },
+   "model": "gemini-3.5-flash-lite",
+   "content_hash": "7d760ee82a41faa6301f8091fe4ee3c678659b2f7cbc72fe8b1c3535968aa48a"
+  },
+  "9116197": {
+   "status": "ok",
+   "doc_id": "9116197",
+   "member_id": "self-keith-alan-tx03",
+   "member": "Keith Alan Self",
+   "state_dst": "TX03",
+   "filing_date": "2026-06-30",
+   "pdf": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/9116197.pdf",
+   "zh_tw": "Keith Self的眾議院定期交易報告第1頁，列出四筆財務交易。",
+   "en": "Page 1 of a House Periodic Transaction Report for Keith Self listing four financial transactions.",
+   "rows": [
+    {
+     "asset_name": "AT&T Inc",
+     "tx_type": "Sale (partial or full unreadable from context, but X is under Sale box unless specified otherwise - actually it looks like Sale box is checked clearly for AT&T? Wait, looking closely: Purchase is empty, Sale has X, Partial Sale is empty, Exchange is empty.) Let's check: AT&T has X in Sale column, amount range $1,001-$15,000. Date 01/10/25. Wait, let's look closer at AT&T: Purchase is empty, Sale is checked. Amount range $1,001-$15,000. Let's just output accurately as visible: tx_type Sale, tx_date 01/10/25, amount_range $1,001-$15,000. Wait, let me strictly follow schema: asset_name, amount_range, ticker_guess, tx_date, tx_type."
+    }
+   ],
+   "compare": {
+    "n_vision_rows": 1,
+    "n_db_rows": 5,
+    "name_overlaps": 1,
+    "date_overlaps": 0,
+    "agrees": true
+   },
+   "model": "gemini-3.5-flash-lite",
+   "content_hash": "668843a136574d11fbe1a311d048ae1ae469c780e06a7e4b79d80869b51972af"
+  },
+  "9116292": {
+   "status": "ok",
+   "doc_id": "9116292",
+   "member_id": "mann-tracey-robert-ks01",
+   "member": "Tracey Mann",
+   "state_dst": "KS01",
+   "filing_date": "2026-08-13",
+   "pdf": "https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/2026/9116292.pdf",
+   "zh_tw": "眾議院定期交易報告第 1 頁，由 Tracey Mann 提交，顯示四筆股票交易。",
+   "en": "Page 1 of a House Periodic Transaction Report for Tracey Mann showing four stock transactions.",
+   "rows": [
+    {
+     "asset_name": "Ex mpl M g Corp Com n Stock",
+     "ticker_guess": "",
+     "tx_type": "S (Sale - Partial/Full not fully marked or S checked separately outside explicit grid, but S is checked above x in row Jt row context - marking as sale/transaction type based on column markers - let's keep exact visible type letter S / purchase indicators if unreadable omit or map to best visible S/P check. Row 1 has S checked for Exmpl Mg Corp? Actually S column is checked with X). Let's review row 1: tx_type S, amount_range $1,001 - $15,000 (A is marked). Wait, let's just record asset names and known values carefully: asset_name Ex mpl M g Corp Com n Stock, tx_date 03/05/24, amount_range $1,001 - $15,000, tx_type S"
+    },
+    {
+     "asset_name": "Apple Incorporated (AAPL)",
+     "ticker_guess": "AAPL",
+     "tx_type": "Purchase (P is checked / xx in P column / or similar purchase indicators, let's check column S is second, P is first. First column xx is in P (Purchase)). Amount range column A ($1,001 - $15,000) is marked with X. tx_date 08/20/2024."
+    },
+    {
+     "asset_name": "Alphabet Incorporated (GOOGL)",
+     "ticker_guess": "GOOGL",
+     "tx_type": "Purchase (P checked xx). Amount range column B ($15,001 - $50,000) is marked with X. tx_date 08/20/2024."
+    },
+    {
+     "asset_name": "Microsoft Corporation (MSFT)",
+     "ticker_guess": "MSFT",
+     "tx_type": "Purchase (P checked xx). Amount range column A ($1,001 - $15,000) is marked with X. tx_date 08/20/2024."
+    },
+    {
+     "asset_name": "Meta Platforms (META)",
+     "ticker_guess": "META",
+     "tx_type": "Purchase (P checked xx). Amount range column A ($1,001 - $15,000) is marked with X. tx_date 08/20/2024."
+    }
+   ],
+   "compare": {
+    "n_vision_rows": 5,
+    "n_db_rows": 10,
+    "name_overlaps": 4,
+    "date_overlaps": 0,
+    "agrees": true
+   },
+   "model": "gemini-3.5-flash-lite",
+   "content_hash": "6f26ca3f76ec715e3317c1eb09b3753ec4351a80f08dd68c369976ddb497d026"
+  }
+ },
+ "meta": {
+  "generated_at": "2026-11-10T11:35:29+08:00",
+  "model": "gemini-3.5-flash-lite",
+  "n_members_ok": 32,
+  "n_picks_ok": 7,
+  "n_vision_ok": 3,
+  "last_run": {
+   "n_generate": 10,
+   "n_json_check": 10,
+   "n_vision": 3,
+   "n_cached": 0,
+   "n_errors": 0,
+   "n_written": 11,
+   "n_skipped": 31
+  }
+ }
+}

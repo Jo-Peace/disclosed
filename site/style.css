@@ -122,3 +122,15 @@ td.am{white-space:nowrap}.an{font-size:12px;max-width:220px}
   .stat b{font-size:20px;overflow-wrap:anywhere}
   .banner b{white-space:normal}
 }
+
+/* Google Gemini brief (precomputed; no key in the browser) */
+.ai.gemini{border:1.5px solid #c5d4f5;background:linear-gradient(180deg,#f7f9ff,#eef3fb);margin:12px 0;overflow-wrap:anywhere}
+.ai.gemini p{margin:6px 0 0;color:var(--ink);font-size:14px;line-height:1.55}
+.ai.gemini .glab{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#1a73e8;background:#e8f0fe;border-radius:999px;padding:2px 8px}
+.ai.gemini .gsrc{margin-top:6px;font-size:12px}
+.ai.gemini.vis{padding:8px 12px}
+.ai.gemini.vis>summary{color:#1a73e8;font-weight:700}
+@media(max-width:700px){
+  .ai.gemini{padding:10px 12px;margin:10px 0}
+  .ai.gemini p{font-size:13.5px}
+}

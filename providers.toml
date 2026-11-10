@@ -22,3 +22,8 @@ reasoning_effort = "medium"
 # [providers.claude_cli]
 # class = "disclosed.providers.examples.cli_tool:CliProvider"
 # command = ["claude", "-p"]
+
+# Google Gemini is used by `python -m disclosed.gemini_briefs fill` (member/pick briefs + JSON fact-check + vision sample).
+# It is a separate pipeline from the MAGI roles above and does not replace Meta as the default role provider.
+# [providers.gemini]
+# model = "gemini-3.5-flash-lite"

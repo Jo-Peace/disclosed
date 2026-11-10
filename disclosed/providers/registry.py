@@ -14,7 +14,8 @@ ROLES = ("pdf_parser", "parser", "risk", "explainer")
 
 def _builtin():
     from .meta import MetaProvider
-    return {"meta": MetaProvider}
+    from .gemini import GeminiProvider
+    return {"meta": MetaProvider, "gemini": GeminiProvider}
 
 def load_config() -> dict:
     if CONFIG_PATH.exists():

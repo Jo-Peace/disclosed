@@ -8,6 +8,7 @@ from .consensus import compute as consensus
 from .performance import HORIZONS, summarize, track_record, LISTED_TYPES
 from .picks import LOGDIR, _read, verify, METHODS, entry_method
 from .summaries import load as load_ai, facts_line
+from .gemini_briefs import public_payload as gemini_payload
 from .score_picks import OUT as SCORED
 
 SITE = config.ROOT / "site"
@@ -112,6 +113,21 @@ def main():
         for p in e["picks"]:
             p["facts_en"] = facts_line(p, "en", E["pick_date"]); p["facts_zh"] = facts_line(p, "zh", E["pick_date"])
             if ai.get(f"{e['pick_date']}|{p['ticker']}", {}).get("status") == "ok": p["ai_summary"] = {"status": "ok", **{k: ai[f"{e['pick_date']}|{p['ticker']}"][k] for k in ("zh_tw", "en")}}
+    gem = gemini_payload()
+    for e in live:
+        for p in e["picks"]:
+            gb = (gem.get("picks") or {}).get(f"{e['pick_date']}|{p['ticker']}")
+            if gb: p["gemini_brief"] = gb
+    for m in members.values():
+        mb = (gem.get("members") or {}).get(m["id"])
+        if mb: m["gemini_brief"] = mb
+    # attach vision samples to the member when present
+    vis_by_m = {}
+    for v in (gem.get("vision") or {}).values():
+        if v.get("member_id"):
+            vis_by_m.setdefault(v["member_id"], []).append(v)
+    for m in members.values():
+        if vis_by_m.get(m["id"]): m["gemini_vision"] = vis_by_m[m["id"]]
     scored = json.loads(SCORED.read_text()) if SCORED.exists() else None
     latest = (live[-1] if live else (back[-1] if back else None))
     if latest and latest["mode"] == "backtest":
@@ -141,6 +157,7 @@ def main():
                   "backtest_chain": verify(LOGDIR / "backtest.jsonl") if (LOGDIR / "backtest.jsonl").exists() else None,
                   "latest_live_hash": live[-1]["hash"] if live else None, "methods": methods},
         "picks_scored": {m: {"n_events": d["n_events"], "summary": d["summary"], "chain_ok": d["chain_ok"]} for m, d in scored["modes"].items()} if scored else None,
+        "gemini": {"model": gem.get("model"), "n_members": gem.get("n_members", 0), "n_picks": gem.get("n_picks", 0), "n_vision": gem.get("n_vision", 0)},
     }
     (SITE / "data.json").write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")))
     (SITE / "prices.json").write_text(json.dumps(prices, separators=(",", ":")))

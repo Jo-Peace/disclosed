@@ -20,3 +20,9 @@ data/*.sqlite
 data/*.sqlite.bak*
 data/*.log
 submission/demo.mp4
+
+# Meet the Builders video outputs
+submission/meetbuilders_*.mp4
+
+data/gemini_cache/
+data/gemini_ledger.jsonl

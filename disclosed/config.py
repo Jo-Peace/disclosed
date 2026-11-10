@@ -29,3 +29,12 @@ META_PRICE_OUT = float(os.environ.get("META_PRICE_OUT", "4.25"))    # output_tok
 MAX_SPEND_USD = float(os.environ.get("DISCLOSED_MAX_SPEND", "40"))
 LLM_CACHE = DATA / "llm_cache"          # raw model responses keyed by request hash (never contains the API key)
 LLM_LEDGER = DATA / "llm_ledger.jsonl"  # one line per call: tokens + estimated cost
+
+# Google Gemini API (AI Studio free tier). Used only by gemini_briefs.py — never sent to the browser.
+GEMINI_KEY_ENV = "GEMINI_API_KEY"
+GEMINI_BASE = os.environ.get("GEMINI_BASE_URL", "https://generativelanguage.googleapis.com/v1beta")
+GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.5-flash-lite")
+GEMINI_CACHE = DATA / "gemini_cache"        # raw responses keyed by request hash (never contains the API key)
+GEMINI_LEDGER = DATA / "gemini_ledger.jsonl"
+GEMINI_MIN_INTERVAL = float(os.environ.get("GEMINI_MIN_INTERVAL", "2.5"))
+GEMINI_STORE = DATA / "gemini_briefs.json"
