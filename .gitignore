@@ -26,3 +26,7 @@ submission/meetbuilders_*.mp4
 
 data/gemini_cache/
 data/gemini_ledger.jsonl
+
+# Daily runner logs
+data/logs/
+data/serve.log
